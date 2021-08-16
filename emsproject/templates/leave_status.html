@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Employee Data</title>
+</head>
+
+<body>
+    <h1 style="background-color:rgb(247, 247, 164);text-align:center">Leave_Status</h1>
+    <ul>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-11">
+                <table class="table table-striped">
+                    <thead>
+                        <tr><h1 style="background-color:rgb(174, 101, 243)">
+                            <th>Username</th>
+                            <th>Employee_Id </th>
+                            <th>Type_Of_Leave </th>
+                            <th>From_Date </th>
+                            <th>To_Date </th>
+                            <th>Department </th>
+                            <th>Status</th>
+        
+                        </tr>
+                    </thead>
+                    {% for emp in employees %}
+                    <tbody>
+                        <tr>
+                            <td>{{emp.username}}</td>
+                            <td>{{emp.employee_ID}}</td>
+                            <td>{{emp.type_of_leave}}</td>
+                            <td>{{emp.from_date}}</td>
+                            <td>{{emp.to_date}}</td>
+                            <td>{{emp.department}}</td>
+                            <td>{{emp.accepted}}</td>
+
+                        </tr>
+                    </h1>
+                        
+                    </body>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    </ul>
+</body>
+</html>
